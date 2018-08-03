@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:AppKilombolas" x:Class="AppKilombolas.MainPage" >
+    
+     
+    <RelativeLayout BackgroundColor=" Black">
+        <StackLayout > 
+         <Label Text="AppQuilombolas" HorizontalOptions="Center"  FontSize="30"  VerticalOptions="Center"/>
+     <Label VerticalOptions="CenterAndExpand"/>
+          </StackLayout>
+    
+    <Image Source="http://www.inesc.org.br/noticias/noticias-gerais/2011/maio/jovens-negros-morrem-mais-por-violencia-do-que-brancos-diz-ipea/image" Opacity="0.3"
+                RelativeLayout.WidthConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                RelativeLayout.HeightConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+           
+    <Grid RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+
+           <RelativeLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <StackLayout Padding="10">
+              <Button  Command="{Binding DenunciarCommand}" Text="Denunciar" TextColor="White"   HorizontalOptions="Center" VerticalOptions="Center"  FontSize="15"/>
+              <Button  Command="{Binding SobreRacismoCommand}" Text="Sobre Racismo" TextColor="White"   HorizontalOptions="Center" VerticalOptions="Center"  FontSize="15"/>
+              <Button  Command="{Binding ComoCommand}" Text="Como denunciar" TextColor="White"   HorizontalOptions="Center" VerticalOptions="Center"  FontSize="15"/>
+              <Button  Command="{Binding SobreCommand}" Text="Sobre o App" TextColor="White"   HorizontalOptions="Center" VerticalOptions="Center"  FontSize="15"/>
+                    </StackLayout>
+            </RelativeLayout>
+             
+    </Grid>
+          
+  </RelativeLayout>
+   
+</ContentPage>

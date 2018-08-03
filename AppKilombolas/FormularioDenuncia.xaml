@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AppKilombolas.FormularioDenuncia" 
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit" 
+             xmlns:local="clr-namespace:AppKilombolas" 
+             xmlns:behaviors="clr-namespace:AppKilombolas">
+    
+    <ContentPage.Content>
+
+    <ScrollView>    
+        <StackLayout BackgroundColor="Olive" Padding="10">
+                
+        <Label Text="A situação aconteceu com você ou um conhecido seu?"/> 
+        <Picker x:Name="pessoa" Title="Escolha uma opção">
+          <Picker.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                            <x:String>Comigo</x:String>
+                            <x:String>Com uma pessoa conhecida</x:String>
+            </x:Array>             
+          </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="Que tipo de situação você está denunciando?"/> 
+        <Picker x:Name="tipo" Title="Escolha uma opção">
+          <Picker.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                            <x:String>Dano psicológico. Algo escrito/postado em mídias sociais ou internet</x:String>
+                            <x:String>Dano físico </x:String>
+                            <x:String>Assédio</x:String>
+                            <x:String>Racismo</x:String>
+                            <x:String>Injuria Racial</x:String>
+            </x:Array>
+          </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="Como você se auto declara enquanto raça?"/> 
+        <Picker x:Name="etnia" Title="Escolha uma opção">
+          <Picker.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                            <x:String>Preto</x:String>
+                            <x:String>Pardo </x:String>
+                            <x:String>Indigena</x:String>
+                            <x:String>Amarelo</x:String>
+            </x:Array>
+          </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="Qual sua identidade de gênero?"/> 
+        <Picker x:Name="genero" Title="Escolha uma opção">
+          <Picker.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                            <x:String>Homem Cisgênero</x:String>
+                            <x:String>Homem Transgênero</x:String>
+                            <x:String>Mulher cisgênera</x:String>
+                            <x:String>Mulher Transgênera </x:String>
+                            <x:String>Mulher Transexual</x:String>
+                            <x:String>Não-Binário</x:String>
+                            <x:String>Travesti</x:String>
+                            <x:String>Outro</x:String>
+            </x:Array>
+          </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="Onde ocorreu a situação?"/> 
+        <Picker x:Name="localQueOcorreu" Title="Escolha uma opção">
+          <Picker.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                            <x:String>Em casa</x:String>
+                            <x:String>Casa de amigo ou vizinho</x:String>
+                            <x:String>Na rua</x:String>
+                            <x:String>Na empresa </x:String>
+                            <x:String>Local de entretenimento</x:String>
+                            <x:String>Outro</x:String>
+            </x:Array>
+          </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="Por favor, descreva o incidente aqui, dando o máximo de detalhes possível. *Tome todo o espaço que você precisar."/> 
+        <Editor HeightRequest="250" />
+
+        <Label Text="Esse caso foi relatado para mais alguém?"/> 
+        <Picker x:Name="lugaresInformados" Title="Escolha uma opção">
+          <Picker.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                            <x:String>Não informei a mais ninguém.</x:String>
+                            <x:String>Sim. Á polícia</x:String>
+                            <x:String>Sim. Ao sindicato</x:String>
+                            <x:String>Sim. Ao sponsor e/ou People partner </x:String>
+                            <x:String>Sim. Minha familia/ Parentes/ Amigos</x:String>
+                            <x:String>Outro</x:String>
+            </x:Array>
+          </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="Podemos querer entrar em contato para discutir o assunto. Se você concordar, por favor, forneça seus dados de contato."/>              
+        <Entry Text="{Binding FirstName}" Placeholder="Nome" />
+
+        <Entry x:Name="entryEmail" Keyboard="Email" Placeholder="E-mail">
+            <Entry.Behaviors>
+                <local:EmailValidatorBehavior x:Name="emailValidator" />
+            </Entry.Behaviors>
+        </Entry>
+
+        <AbsoluteLayout>
+            <Label Text="Phone:" AbsoluteLayout.LayoutBounds="0,20,.3,40" AbsoluteLayout.LayoutFlags="WidthProportional" />
+            <Entry Text="{Binding Phone}" AbsoluteLayout.LayoutBounds="1,10,.75,40" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" Keyboard="Telephone">
+                <Entry.Behaviors>
+                    <behaviors:PhoneNumberMaskBehavior x:Name="PhoneMask" />
+                    <behaviors:EntryLengthValidator MaxLength="12" />
+                </Entry.Behaviors>
+            </Entry>                    
+        </AbsoluteLayout>
+        
+        <Button Clicked="Button_Clicked" Text="Enviar" TextColor="Black"/>
+
+        </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>  
+</ContentPage>

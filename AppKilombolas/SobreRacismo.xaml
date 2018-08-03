@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AppKilombolas.SobreRacismo">
+    <ContentPage.Content>
+    </ContentPage.Content>
+
+     <StackLayout>
+        <Label Text="Raça"/>
+            <Label Text="Definições, Classificações e Exemplos"/>
+        <Label Text="Raça — a ciência genética demonstrou que o conceito biológico de raça não tem sustentação científica, porque há mais diferenças entre os indivíduos considerados da mesma raça, do ponto de vista genético, do que entre as supostas raças, ou seja, a espécie humana é única e indivisível."/>
+        <Label Text="De acordo com os ministérios da saúde e educação, as diferenças de fenótipo (cor de pele, tipo e textura de cabelo, formato do nariz, do crânio e do rosto) e as influências de manifestações culturais não justificam a distinção hierárquica entre os povos (raças superiores ou inferiores), que determinariam o destino e o lugar dos sujeitos na sociedade brasileira em razão da carga de preconceito e discriminação aos quais estão submetidos os grupos não brancos."/>
+        <Label Text="Etnia — refere-se a um grupo de pessoas que consideram ter um ancestral comum e compartilham da mesma língua, da mesma religião, da mesma cultura, das tradições e visão de mundo, do mesmo território ou das mesmas condições históricas."/>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AppKilombolas.Sobre">
+    <ContentPage.Content>
+    </ContentPage.Content>
+
+    <StackLayout>  
+
+    <Label Text="O AppQuilombolas é um aplicativo de coleta de denúncias sobre racismo e injuria racial. Ele está sendo desenvolvido por pessoas desenvolvedoras membras do grupo de pessoas negras da ThoughtWorks chamado Quilombolas."/>
+    <Label Text="O quilombolas é um coletivo negro, aberto para discussões, troca de experiências e ações para impactar na comunidade em prol da população negra."/>
+    <Label Text="Dúvidas ou sugestões entre em contato conosco: quilombolas@thoughtworks.com"/>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AppKilombolas.CadastroView" 
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit" >
+      
+
+<StackLayout BackgroundColor="Olive" Padding="10">
+        
+<Label Text="Informe seus dados"/>   
+  
+<Entry Text="{Binding TxtNome}" Placeholder="Nome" />
+<Entry Text="{Binding TxtEmail}" Placeholder="E-mail" />
+             <Picker x:Name="picker" Title="Sexo" ItemDisplayBinding="{Binding Sexo}">
+  <Picker.ItemsSource >
+    <x:Array Type="{x:Type x:String}">
+      <x:String>Feminino</x:String>
+      <x:String>Masculino</x:String>
+     <x:String>Não informar</x:String>
+    </x:Array>
+  </Picker.ItemsSource>
+</Picker>
+<DatePicker  Format="dd/MM/yyyy"/>
+        
+<Button  Command="{Binding EnviarCommand}" Text="Cadastrar" TextColor="Black"/>
+
+</StackLayout>
+</ContentPage>
